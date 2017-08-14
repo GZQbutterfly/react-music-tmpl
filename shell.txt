@@ -1,0 +1,36 @@
+cnpm install react --save
+
+cnpm install react-dom react-hot-loader react-router pubsub-js  --save
+
+
+npm install autoprefixer  --save-dev
+
+
+cnpm install babel-core babel-loader babel-plugin-react-transform babel-preset-es2015 babel-preset-react --save-dev
+
+
+cnpm install css-loader extract-text-webpack-plugin html-webpack-plugin --save-dev
+
+cnpm install json-loader less less-loader style-loader webpack webpack-dev-server --save-dev
+
+npm install  react-router-dom --save
+
+cnpm install copy-webpack-plugin --save-dev
+new CopyWebpackPlugin([{
+    from: __dirname + '/src/public'
+}]);
+//作用：把public 里面的内容全部拷贝到编译目录
+from    定义要拷贝的源目录           from: __dirname + ‘/src/public’
+to      定义要拷贝到的目标目录     from: __dirname + ‘/dist’
+toType  file 或者 dir         可选，默认是文件
+force   强制覆盖先前的插件           可选 默认false
+context                         可选 默认base context可用specific context
+flatten 只拷贝文件不管文件夹      默认是false
+ignore  忽略拷贝指定的文件           可以用模糊匹配
+
+
+webpack --config webpack.config.js --progress --display-modules --colors --display-reasons
+
+webpack
+
+node server
